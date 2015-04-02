@@ -1,0 +1,19 @@
+{
+  "dest": "assets/manifest.json",
+  "querystring": true,
+  "assets/css/font-awesome.min.css": {
+    "path": "assets/css/font-awesome.min.css",
+    "hash": "334e6c35ff1db63630aabd6f476e8d55",
+    "handle": "cocktail-css"
+  },
+  "assets/css/main.min.css": {
+    "path": "assets/css/main.min.css",
+    "hash": "bc791ed8a6999230b870675f429270d2",
+    "handle": "cocktail-css"
+  },
+  "assets/js/scripts.min.js": {
+    "path": "assets/js/scripts.min.js",
+    "hash": "ef2b99e92343e73966523d881e5c58dd",
+    "handle": "cocktail-js"
+  }
+}
