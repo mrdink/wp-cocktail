@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cocktail 0.1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2015-04-02 16:00:41+00:00\n"
+"POT-Creation-Date: 2015-04-17 01:02:09+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,23 +13,14 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.5.1\n"
 
-#: 404.php:15
+#: 404.php:14
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: 404.php:19
+#: 404.php:18
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the "
 "links below or a search?"
-msgstr ""
-
-#: 404.php:27
-msgid "Most Used Categories"
-msgstr ""
-
-#: 404.php:44
-#. translators: %1$s: smiley
-msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
 #: comments.php:35 comments.php:56
@@ -81,16 +72,20 @@ msgstr ""
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: functions.php:53 header.php:31
+#: functions.php:53
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:88
+#: functions.php:94
 msgid "Sidebar"
 msgstr ""
 
-#: header.php:22
+#: header.php:24
 msgid "Skip to content"
+msgstr ""
+
+#: header.php:33
+msgid "Menu"
 msgstr ""
 
 #: inc/activation.php:28 inc/activation.php:29
@@ -161,7 +156,7 @@ msgstr ""
 msgid "Primary Navigation"
 msgstr ""
 
-#: inc/extras.php:104
+#: inc/extras.php:110
 msgid "Page %s"
 msgstr ""
 
@@ -243,7 +238,7 @@ msgstr ""
 msgid "Archives"
 msgstr ""
 
-#: search.php:16
+#: search.php:15
 msgid "Search Results for: %s"
 msgstr ""
 
@@ -252,13 +247,13 @@ msgid "Cocktail"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://github.com/mrdink/wp-cocktail/"
+msgid "https://github.com/mrdink/wp-cocktail"
 msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
 "Cocktail is a starting point. Use Bourbon, Bitters, and Neat to build your "
-"next project."
+"next WordPress project."
 msgstr ""
 
 #. Author of the plugin/theme
@@ -266,7 +261,7 @@ msgid "Justin Peacock"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://byjust.in/"
+msgid "http://byjust.in"
 msgstr ""
 
 #: comments.php:28
@@ -275,22 +270,6 @@ msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
-
-#: functions.php:111
-#. translators: If there are characters in your language that are not supported
-#. by Open Sans, translate this to 'off'. Do not translate into your own
-#. language.
-msgctxt "Open Sans font: on or off"
-msgid "on"
-msgstr ""
-
-#: functions.php:116
-#. translators: To add an additional character subset specific to your
-#. language, translate this to 'greek', 'cyrillic', 'devanagari' or
-#. 'vietnamese'. Do not translate into your own language.
-msgctxt "Add new subset (greek, cyrillic, devanagari, vietnamese)"
-msgid "no-subset"
-msgstr ""
 
 #: inc/template-tags.php:86
 msgctxt "post date"

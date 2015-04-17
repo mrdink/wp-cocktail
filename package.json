@@ -1,7 +1,7 @@
 {
   "name": "cocktail",
   "title": "Cocktail",
-  "description": "Custom theme developed with Cocktail.",
+  "description": "Cocktail is a starting point. Use Bourbon, Bitters, and Neat to build your next WordPress project.",
   "version": "0.1.0",
   "author": {
     "name": "Justin Peacock",
@@ -12,17 +12,16 @@
     "node": ">= 0.10.0"
   },
   "devDependencies": {
-    "bower": "^1.3.12",
     "grunt": "^0.4.5",
-    "grunt-autoprefixer": "^2.0.0",
+    "grunt-autoprefixer": "^3.0.0",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-compress": "^0.13.0",
     "grunt-contrib-concat": "~0.5.0",
     "grunt-contrib-copy": "^0.8.0",
     "grunt-contrib-cssmin": "^0.12.2",
     "grunt-contrib-imagemin": "^0.9.4",
-    "grunt-contrib-jshint": "^0.11.1",
-    "grunt-contrib-uglify": "^0.8.1",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-uglify": "^0.9.1",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-csscomb": "^3.0.0",
     "grunt-cssjanus": "^0.2.4",
@@ -33,7 +32,7 @@
     "grunt-version-check": "^0.2.1",
     "grunt-wp-assets": "~0.2.6",
     "grunt-wp-i18n": "^0.5.1",
-    "load-grunt-config": "^0.16.0",
+    "load-grunt-config": "^0.17.0",
     "load-grunt-tasks": "^3.0.0",
     "node-sass": "^2.0.1",
     "time-grunt": "^1.0.0",

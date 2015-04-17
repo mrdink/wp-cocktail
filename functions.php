@@ -46,11 +46,11 @@ function cocktail_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'cocktail' ),
+		'primary' => __( 'Primary Menu', 'cocktail' )
 	) );
 
 	/*
@@ -74,6 +74,12 @@ function cocktail_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	/*
+	 * This theme styles the visual editor to resemble the theme style,
+	 * specifically font, colors, icons, and column width.
+	 */
+	add_editor_style( array( 'assets/css/editor-style.css', 'assets/css/font-awesome.css' ) );
 }
 endif; // cocktail_setup
 add_action( 'after_setup_theme', 'cocktail_setup' );
@@ -96,46 +102,6 @@ function cocktail_widgets_init() {
 }
 add_action( 'widgets_init', 'cocktail_widgets_init' );
 
-if ( ! function_exists( 'cocktail_fonts_url' ) ) :
-/**
- * Register Google fonts for Cocktail.
- *
- * @return string Google fonts URL for the theme.
- */
-function cocktail_fonts_url() {
-	$fonts_url = '';
-	$fonts     = array();
-	$subsets   = 'latin,latin-ext';
-
-	/* translators: If there are characters in your language that are not supported by Open Sans, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Open Sans font: on or off', 'cocktail' ) ) {
-		$fonts[] = 'Open Sans:300italic,400italic,600italic,700italic,400,300,600,700,800';
-	}
-
-	/* translators: To add an additional character subset specific to your language, translate this to 'greek', 'cyrillic', 'devanagari' or 'vietnamese'. Do not translate into your own language. */
-	$subset = _x( 'no-subset', 'Add new subset (greek, cyrillic, devanagari, vietnamese)', 'cocktail' );
-
-	if ( 'cyrillic' == $subset ) {
-		$subsets .= ',cyrillic,cyrillic-ext';
-	} elseif ( 'greek' == $subset ) {
-		$subsets .= ',greek,greek-ext';
-	} elseif ( 'devanagari' == $subset ) {
-		$subsets .= ',devanagari';
-	} elseif ( 'vietnamese' == $subset ) {
-		$subsets .= ',vietnamese';
-	}
-
-	if ( $fonts ) {
-		$fonts_url = add_query_arg( array(
-			'family' => urlencode( implode( '|', $fonts ) ),
-			'subset' => urlencode( $subsets ),
-		), '//fonts.googleapis.com/css' );
-	}
-
-	return $fonts_url;
-}
-endif;
-
 /*
  * Apple touch icons + favicon
  */
@@ -146,6 +112,11 @@ function cocktail_add_icons() { ?>
 
 <?php }
 add_action('wp_head','cocktail_add_icons');
+
+/**
+ * Theme activation and style guide.
+ */
+require get_template_directory() . '/inc/activation.php';
 
 /**
  * Enqueue scripts and styles.

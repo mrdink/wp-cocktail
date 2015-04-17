@@ -4,6 +4,7 @@ input,
 select,
 textarea {
     color: $body-font-color;
+    font-family: $body-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
 }
@@ -26,11 +27,11 @@ i {
 }
 
 blockquote {
-    margin: 0 $paragraph-margin-bottom;
+    margin: 0 $base-spacing;
 }
 
 address {
-    margin: 0 0 $paragraph-margin-bottom;
+    margin: 0 0 $base-spacing;
 }
 
 pre {

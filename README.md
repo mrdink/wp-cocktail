@@ -1,6 +1,6 @@
 # Cocktail
 
-Cocktail is a starting point. Use Bourbon, Bitters, and Neat to build your next project.
+Cocktail is a starting point. Use Bourbon, Bitters, and Neat to build your next WordPress project.
 
 ## Development
 

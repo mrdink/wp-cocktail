@@ -10,7 +10,7 @@
  * always reference jQuery with $, even when in .noConflict() mode.
  *
  * Cocktail
- * https://heavyheavy.beanstalkapp.com/estrellas/
+ * https://github.com/mrdink/wp-cocktail
  *
  * Copyright (c) 2015 Justin Peacock
  * Licensed under the GPLv2+ license.
@@ -20,7 +20,7 @@
 
   // Use this variable to set up the common and page specific functions. If you
   // rename this variable, you will also need to rename the namespace below.
-  var Cocktail = {
+  var COCKTAIL = {
     // All pages
     common: {
       init: function() {
@@ -112,7 +112,7 @@
   // Add additional events for more control over timing e.g. a finalize event
   var UTIL = {
     fire: function(func, funcname, args) {
-      var namespace = Cocktail;
+      var namespace = COCKTAIL;
       funcname = (funcname === undefined) ? 'init' : funcname;
       if (func !== '' && namespace[func] && typeof namespace[func][funcname] === 'function') {
         namespace[func][funcname](args);

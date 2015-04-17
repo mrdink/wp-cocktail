@@ -12,16 +12,15 @@
  */
 function cocktail_scripts() {
 
-	$live_reload 	= true;
+	$live_reload 	= false;
 	$minification = false;
 
 	/**
 	 * The build task in Grunt renames production assets with a hash
 	 * Read the asset names from assets-manifest.json
 	 */
-	if ( $minification !== true ) {
+	if ( true !== $minification ) {
 		$assets = array(
-			'normalize'   => '/assets/css/normalize.css',
 			'css'       	=> '/assets/css/main.css',
 			'icons'  			=> '/assets/css/font-awesome.css',
 			'child'     	=> '/style.css',
@@ -33,7 +32,6 @@ function cocktail_scripts() {
 		$get_assets = file_get_contents( get_template_directory() . '/assets/manifest.json' );
 		$assets     = json_decode($get_assets, true);
 		$assets     = array(
-			'normalize'   => '/assets/css/normalize.min.css',
 			'css'       	=> '/assets/css/main.min.css?' . $assets['assets/css/main.min.css']['hash'],
 			'icons'  			=> '/assets/css/font-awesome.min.css?' . $assets['assets/css/font-awesome.min.css']['hash'],
 			'child'     	=> '/style.css',
@@ -42,9 +40,7 @@ function cocktail_scripts() {
 		);
 	}
 
-	wp_enqueue_style( 'cocktail-normalize', get_template_directory_uri() . $assets['normalize'], false, null);
 	wp_enqueue_style( 'cocktail-css', get_template_directory_uri() . $assets['css'], false, null);
-	wp_enqueue_style( 'cocktail-fonts', cocktail_fonts_url(), array(), null );
 	wp_enqueue_style( 'cocktail-icons', get_template_directory_uri() . $assets['icons'], false, null);
 
 	if ( is_child_theme() ){
@@ -59,7 +55,7 @@ function cocktail_scripts() {
 	wp_enqueue_script( 'jquery');
 	wp_enqueue_script( 'cocktail-js', get_template_directory_uri() . $assets['js'], array(), null, true);
 
-	if ( $live_reload == true ) {
+	if ( true == $live_reload ) {
 		wp_enqueue_script( 'livereload', $assets['livereload'], '', false, true );
 	}
 }

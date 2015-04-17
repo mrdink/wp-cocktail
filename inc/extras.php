@@ -19,19 +19,19 @@ add_filter('embed_oembed_html', 'cocktail_embed_oembed_class', 99, 4);
  * Unregister Core Widgets
  */
 function cocktail_default_widgets() {
-	unregister_widget('WP_Widget_Pages');
+	// unregister_widget('WP_Widget_Pages');
 	unregister_widget('WP_Widget_Calendar');
 	unregister_widget('WP_Widget_Archives');
 	unregister_widget('WP_Widget_Links');
 	unregister_widget('WP_Widget_Meta');
-	unregister_widget('WP_Widget_Search');
-	unregister_widget('WP_Widget_Text');
-	unregister_widget('WP_Widget_Categories');
-	unregister_widget('WP_Widget_Recent_Posts');
+	// unregister_widget('WP_Widget_Search');
+	// unregister_widget('WP_Widget_Text');
+	// unregister_widget('WP_Widget_Categories');
+	// unregister_widget('WP_Widget_Recent_Posts');
 	unregister_widget('WP_Widget_Recent_Comments');
 	unregister_widget('WP_Widget_RSS');
 	unregister_widget('WP_Widget_Tag_Cloud');
-	unregister_widget('WP_Nav_Menu_Widget');
+	// unregister_widget('WP_Nav_Menu_Widget');
 }
 add_action('widgets_init', 'cocktail_default_widgets', 11);
 
@@ -47,9 +47,15 @@ add_filter('mce_buttons_2', 'cocktail_mce_buttons');
 function cocktail_insert_formats( $init_array ) {
 	$style_formats = array(
 		array(
-			'title' => 'Button',
-			'block' => '$a',
+			'title' => 'Primary Button',
+			'block' => 'a',
 			'classes' => 'button',
+			'wrapper' => true,
+		),
+		array(
+			'title' => 'Secondary Button',
+			'block' => 'a',
+			'classes' => 'secondary button',
 			'wrapper' => true,
 		)
 	);
